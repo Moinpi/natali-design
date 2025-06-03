@@ -1,1 +1,38 @@
 
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #fff;
+}
+.slider {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide-track {
+    display: flex;
+    width: calc(100vw * 20); /* удлинённый трек */
+    animation: scroll 60s linear infinite;
+}
+.slide {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide img {
+    max-height: 95vh;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100vw * 10); }
+}
